@@ -12,6 +12,8 @@
     tools:context="com.sparta.kami.pklmobile.Rekap"
     tools:showIn="@layout/activity_rekap">
 
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -19,6 +21,19 @@
         android:textStyle="bold"
         android:text="REKAP TRANSAKSI PENJUALAN"
         android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView">
+
+        <ListView
+            android:id="@+id/listRekap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </ScrollView>
 
     <Button
         android:layout_width="wrap_content"
@@ -48,7 +63,7 @@
         android:layout_alignTop="@+id/buttonKatalog"
         android:background="@android:color/transparent"
         android:layout_alignParentStart="true" />
-
+    <!--
     <TableRow
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
@@ -70,5 +85,5 @@
             android:layout_width="wrap_content" />
 
     </TableRow>
-
+    -->
 </RelativeLayout>
