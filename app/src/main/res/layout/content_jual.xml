@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Jual"
+    tools:showIn="@layout/activity_jual">
+
+    <TextView
+        android:id="@+id/textViewJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="19dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="DETAIL TRANSAKSI PENJUALAN"/>
+
+    <TextView
+        android:id="@+id/textViewNamaProduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJudul"
+        android:layout_marginTop="39dp"
+        android:text="Nama Produk:"/>
+
+    <EditText
+        android:id="@+id/editTextNamaProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewNamaProduk"/>
+
+    <TextView
+        android:id="@+id/textViewHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextNamaProduk"
+        android:layout_marginTop="17dp"
+        android:text="Harga Jual:"/>
+
+
+    <EditText
+        android:id="@+id/editTextHarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewHarga">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewKuantitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextHarga"
+        android:layout_marginTop="17dp"
+        android:text="Kuantitas:"/>
+
+
+    <EditText
+        android:id="@+id/editTextKuantitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewKuantitas">
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonBatal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft = "true"
+        android:layout_below="@+id/editTextKuantitas"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="46dp"
+        android:text="Batal"/>
+
+    <Button
+        android:id="@+id/buttonRegistrasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom = "@+id/buttonBatal"
+        android:layout_alignRight = "@+id/editTextKuantitas"
+        android:layout_marginRight="16dp"
+        android:text="Proses"/>
+
+</RelativeLayout>

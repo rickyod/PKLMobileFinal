@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sparta.kami.pklmobile.Produk"
+    tools:showIn="@layout/activity_produk">
+
+    <TextView
+        android:id="@+id/textViewJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="DETAIL PRODUK"/>
+
+    <TextView
+        android:id="@+id/textViewNamaProduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJudul"
+        android:layout_marginTop="39dp"
+        android:text="Nama Produk:"/>
+
+    <EditText
+        android:id="@+id/editTextNamaProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewNamaProduk"/>
+
+    <TextView
+        android:id="@+id/textViewHargaPokok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextNamaProduk"
+        android:layout_marginTop="17dp"
+        android:text="Harga Pokok:"/>
+
+
+    <EditText
+        android:id="@+id/editTextHargaPokok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewHargaPokok">
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewHargaJual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextHargaPokok"
+        android:layout_marginTop="17dp"
+        android:text="Harga Jual:"/>
+
+
+    <EditText
+        android:id="@+id/editTextHargaJual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewHargaJual">
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonKembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="Kembali"
+        android:layout_below="@+id/buttonTambah"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/buttonSimpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Simpan"
+        android:layout_below="@+id/buttonTambah"
+        android:layout_alignEnd="@+id/editTextHargaJual" />
+
+    <Button
+        android:id="@+id/buttonTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/editTextHargaJual"
+        android:layout_alignStart="@+id/buttonSimpan" />
+
+</RelativeLayout>

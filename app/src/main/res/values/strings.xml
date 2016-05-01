@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PKL Mobile</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_registrasi">Registrasi</string>
+    <string name="title_activity_transaksi">Transaksi</string>
+    <string name="title_activity_rekap">Rekap</string>
+    <string name="title_activity_splash_out">SplashOut</string>
+    <string name="title_activity_katalog">Katalog</string>
+    <string name="title_activity_produk">Produk</string>
+</resources>

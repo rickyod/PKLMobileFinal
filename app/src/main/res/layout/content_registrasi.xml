@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sparta.kami.pklmobile.Registrasi"
+    tools:showIn="@layout/activity_registrasi">
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Alamat Email:"/>
+
+    <TextView
+        android:id="@+id/textViewNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginTop="17dp"
+        android:text="Nama lengkap:"/>
+
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewNama"
+        android:ems="10"
+        android:hint="Masukkan nama lengkap"/>
+
+    <TextView
+        android:id="@+id/textViewAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextNama"
+        android:layout_marginTop="17dp"
+        android:text="Alamat lapak:"/>
+
+    <EditText
+        android:id="@+id/editTextAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewAlamat"
+        android:ems="10"
+        android:hint="Masukkan alamat lapak"/>
+
+    <TextView
+        android:id="@+id/textViewNomorHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextAlamat"
+        android:layout_marginTop="17dp"
+        android:text="Nomor HP:"/>
+
+    <EditText
+        android:id="@+id/editTextNomorHP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewNomorHP"
+        android:ems="10"
+        android:hint="Nomor HP"/>
+
+    <TextView
+        android:id="@+id/textViewTanggalLahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextNomorHP"
+        android:layout_marginTop="17dp"
+        android:text="Tanggal Lahir:"/>
+
+    <Button
+        android:id="@+id/buttonTanggalLahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNomorHP"
+        android:layout_centerHorizontal="true"
+        android:text="Set date"
+        android:onClick="setDate"/>
+
+    <TextView
+        android:id="@+id/textViewProduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonTanggalLahir"
+        android:layout_marginTop="17dp"
+        android:text="Produk Unggul:"/>
+
+    <EditText
+        android:id="@+id/editTextProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewProduk"
+        android:ems="10"
+        android:hint="Masukkan produk unggul"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewEmail"
+        android:ems="10"
+        android:hint="Masukkan email">
+        <requestFocus/>
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonBatal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft = "true"
+        android:layout_below="@+id/editTextProduk"
+        android:layout_marginTop="26dp"
+        android:text="Batal"/>
+
+    <Button
+        android:id="@+id/buttonSimpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom = "@+id/buttonBatal"
+        android:layout_alignRight = "@+id/editTextProduk"
+        android:layout_marginRight="16dp"
+        android:text="Simpan"/>
+
+</RelativeLayout>
