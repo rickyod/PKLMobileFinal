@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Yod on 5/1/2016.
  */
-public class DataManipulator {
+public class DataManipulator  {
     private static final String DATABASE_NAME = "pklmobile.db";
     private static final int DATABASE_VERSION = 1;
     private static String TABLE_NAME;
@@ -23,9 +23,10 @@ public class DataManipulator {
 
     private static String INSERT;
 
-    public DataManipulator(Context context)
+    public DataManipulator(Context context,String tableName)
     {
         DataManipulator.context = context;
+        this.TABLE_NAME = tableName;
         OpenHelper openHelper = new OpenHelper(DataManipulator.context);
         DataManipulator.db = openHelper.getWritableDatabase();
         this.insertStmt = DataManipulator.db.compileStatement(INSERT);
@@ -33,7 +34,6 @@ public class DataManipulator {
 
     public long insertRegisUser(String email, String name, String address, String number, String birthday, String product)
     {
-        this.TABLE_NAME = "iUser";
         INSERT = "insert into "+TABLE_NAME+" (email,name,address,nohp,birthday,product) values (?,?,?,?,?,?)";
         this.insertStmt.bindString(1, email);
         this.insertStmt.bindString(2, name);
@@ -41,6 +41,24 @@ public class DataManipulator {
         this.insertStmt.bindString(4, number);
         this.insertStmt.bindString(5, birthday);
         this.insertStmt.bindString(6, product);
+        return this.insertStmt.executeInsert();
+    }
+
+    public long insertProduk(String nama, String hargaPokok, String hargaJual)
+    {
+        INSERT = "insert into "+TABLE_NAME+" (nama,hargaPokok,hargaJual) values (?,?,?)";
+        this.insertStmt.bindString(1, nama);
+        this.insertStmt.bindString(2, hargaPokok);
+        this.insertStmt.bindString(3, hargaJual);
+        return this.insertStmt.executeInsert();
+    }
+
+    public long insertTransaksi(String nama, String hargaJual, String kuantitas)
+    {
+        INSERT = "insert into "+TABLE_NAME+" (nama,hargaPokok,hargaJual) values (?,?,?)";
+        this.insertStmt.bindString(1, nama);
+        this.insertStmt.bindString(2, hargaJual);
+        this.insertStmt.bindString(3, kuantitas);
         return this.insertStmt.executeInsert();
     }
 
@@ -84,7 +102,10 @@ public class DataManipulator {
         @Override
         public void onCreate(SQLiteDatabase db)
         {
-            db.execSQL("CREATE TABLE "+TABLE_NAME+" (id INTEGER PRIMARY KEY, name TEXT, "+ "number TEXT, skypeId TEXT, address TEXT)");
+            if(TABLE_NAME.equals("iUser")){
+                db.execSQL("CREATE TABLE "+TABLE_NAME+" (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, name TEXT, address TEXT, nohp TEXT, birthday TEXT, product TEXT)");
+            }
+
         }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)

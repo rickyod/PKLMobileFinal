@@ -8,8 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class Jual extends AppCompatActivity {
+public class Jual extends AppCompatActivity implements View.OnClickListener {
+
+    private DataManipulator dm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,4 +40,21 @@ public class Jual extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onClick(View view) {
+        Intent i;
+        switch (view.getId()) {
+            case R.id.buttonBatal:
+                i = new Intent(Jual.this,Transaksi.class);
+                startActivity(i);
+                finish();
+                break;
+            case R.id.buttonSimpan:
+                i = new Intent(Jual.this,Transaksi.class);
+                startActivity(i);
+                finish();
+                break;
+
+        }
+    }
 }
