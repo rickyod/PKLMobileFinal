@@ -73,30 +73,30 @@
     </EditText>
 
     <Button
-        android:id="@+id/buttonKembali"
+        android:id="@+id/buttonPKembali"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:text="Kembali"
-        android:layout_below="@+id/buttonTambah"
+        android:layout_below="@+id/buttonPTambah"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/buttonSimpan"
+        android:id="@+id/buttonPSimpan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:text="Simpan"
-        android:layout_below="@+id/buttonTambah"
+        android:layout_below="@+id/buttonPTambah"
         android:layout_alignEnd="@+id/editTextHargaJual" />
 
     <Button
-        android:id="@+id/buttonTambah"
+        android:id="@+id/buttonPTambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tambah"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/editTextHargaJual"
-        android:layout_alignStart="@+id/buttonSimpan" />
+        android:layout_alignStart="@+id/buttonPSimpan" />
 
 </RelativeLayout>

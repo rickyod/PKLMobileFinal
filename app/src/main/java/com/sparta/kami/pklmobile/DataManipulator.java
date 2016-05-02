@@ -55,7 +55,7 @@ public class DataManipulator  {
 
     public long insertTransaksi(String nama, String hargaJual, String kuantitas)
     {
-        INSERT = "insert into "+TABLE_NAME+" (nama,hargaPokok,hargaJual) values (?,?,?)";
+        INSERT = "insert into "+TABLE_NAME+" (nama,hargaJual, kuantitas) values (?,?,?)";
         this.insertStmt.bindString(1, nama);
         this.insertStmt.bindString(2, hargaJual);
         this.insertStmt.bindString(3, kuantitas);
