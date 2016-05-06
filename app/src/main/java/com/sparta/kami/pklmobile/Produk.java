@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 public class Produk extends AppCompatActivity implements View.OnClickListener {
 
-    private DataManipulator dm;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,21 +38,15 @@ public class Produk extends AppCompatActivity implements View.OnClickListener {
                 nama = ((TextView)findViewById(R.id.editTextNamaProduk)).getText().toString();
                 hargaPokok = ((TextView)findViewById(R.id.editTextHargaPokok)).getText().toString();
                 hargaJual = ((TextView)findViewById(R.id.editTextHargaJual)).getText().toString();
-                dm = new DataManipulator(this,"iProduk");
-                dm.insertProduk(nama,hargaPokok,hargaJual);
                 i = new Intent(Produk.this, Produk.class);
                 startActivity(i);
                 finish();
                 break;
             case R.id.buttonPSimpan:
-                Log.d("Click", "onClick: Simpan");
                 nama = ((TextView)findViewById(R.id.editTextNamaProduk)).getText().toString();
                 hargaPokok = ((TextView)findViewById(R.id.editTextHargaPokok)).getText().toString();
                 hargaJual = ((TextView)findViewById(R.id.editTextHargaJual)).getText().toString();
-                dm = new DataManipulator(this,"iProduk");
-                dm.insertProduk(nama,hargaPokok,hargaJual);
                 i = new Intent(Produk.this, Katalog.class);
-                Log.d("Click", "onClick: Simpan2");
                 startActivity(i);
                 finish();
 

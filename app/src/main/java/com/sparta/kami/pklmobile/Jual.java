@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 public class Jual extends AppCompatActivity implements View.OnClickListener {
 
-    private DataManipulator dm;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

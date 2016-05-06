@@ -12,7 +12,6 @@ import java.util.Date;
 
 public class Registrasi extends AppCompatActivity implements View.OnClickListener{
 
-    private DataManipulator dm;
     private PickerDialogs pickerDialog;
 
     @Override
@@ -47,8 +46,6 @@ public class Registrasi extends AppCompatActivity implements View.OnClickListene
                 String birthday = pickerDialog.getDate();
                 String product = ((TextView)findViewById(R.id.editTextProduk)).getText().toString();
 
-                this.dm = new DataManipulator(this,"iUser");
-                this.dm.insertRegisUser(email,name,address,number,birthday,product);
                 i = new Intent(Registrasi.this,Login.class);
                 startActivity(i);
                 finish();
